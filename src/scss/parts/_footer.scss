@@ -1,0 +1,55 @@
+footer{
+
+	margin-bottom: 4vmax;
+
+	& .container{
+		padding: 1vmax;
+		background-color: #EDEDED;
+		background-image: url(/img/footer-background.svg);
+		background-position: top 35% right 0;
+		background-size: 120% auto;
+
+		& .row{
+
+			margin: 0;
+
+			& .copyright{
+				font-size: calc(18px + .1vmax);
+				font-weight: 700;
+			}
+
+			& .reestr{
+				font-size: 14px;
+			}
+
+			& a{
+
+				display: inline-block;
+
+				& i.mdi{
+					display: inline-block;
+					width: 30px;
+					height: 30px;
+					font-size: 30px;
+					text-align: center;
+					margin-top: auto;
+					margin-bottom: auto;
+				}
+			}
+
+			& .col{
+
+				& > div{
+
+					@media(max-width: $medium){
+						margin: 20px 0;
+
+						& a{
+							margin: 0 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,223 @@
+body{
+
+	background: $paper;
+
+	& .bttn{
+
+		display: inline-block;
+		line-height: 2em;
+		padding: 0 20px;
+		background-color: $link-color;
+		color: $paper;
+		transition: background-color .2s;
+		margin-bottom: 15px;
+		margin-right: 15px;
+
+		&:hover{
+			background-color: saturate(lighten($link-color, 10), 50);
+		}
+
+		&-outlined{
+			@extend .bttn;
+			background-color: transparent;
+			color: $link-color;
+			box-shadow: 0 0 0 1px $link-color inset;
+
+			&:hover{
+				background-color: rgba($text, .1);
+			}
+		}
+
+		&-critical{
+			@extend .bttn;
+			background-color: $critical;
+			color: $paper;
+
+			&:hover{
+				background-color: saturate(lighten($critical, 10),50);
+			}
+		}
+	}
+
+	& .input-field{
+		border-bottom: 1px solid $text;
+		display: inline-block;
+		position: relative;
+		padding-top: 15px;
+		margin: 10px 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		& input{
+			border: 0;
+			background-color: transparent;
+			line-height: 2rem;
+			font-family: 'Manrope', sans-serif;
+			font-size: calc(16px + .1vmax);
+			display: block;
+			width: 100%;
+
+			&::placeholder{
+				color: transparent;
+				transition: color .2s;
+			}
+
+			& ~ .indicator{
+				border-bottom: 2px solid $link-color;
+				transition: transform .2s;
+				transform: translateY(2px) scaleX(0);
+			}
+
+			&:focus{
+
+				outline: none;
+
+				& ~ .indicator{
+					transform: translateY(2px) scaleX(1);
+				}
+
+				&::placeholder{
+					color: rgba($text, .5);
+				}
+			}
+
+			& ~ label{
+				position: absolute;
+				top: 22px;
+				left: 2px;
+				pointer-events: none;
+				transition: top .2s, font-size .2s;
+				white-space: nowrap;
+			}
+
+			&:focus, &:not(:placeholder-shown){
+
+				& ~ label{
+					top: 0;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	& .check-field{
+
+		margin: 10px 0;
+		position: relative;
+
+		& input{
+			display: none;
+
+			& ~ label{
+				user-select: none;
+				cursor: pointer;
+				padding-left: 34px;
+				display: block;
+
+				&:before{
+					content: '\F0130';
+					font-family: 'Material Design Icons';
+					color: $link-color;
+					position: absolute;
+					left: 0;
+					top: 0;
+					font-size: calc(21px + .1vmax);
+				}
+			}
+
+			&:checked{
+
+				& ~label{
+
+					&:before{
+						content: '\F0134';
+					}
+				}
+			}
+		}
+	}
+
+	& section{
+
+		&.hero{
+
+			height: calc(100vh - 54px);
+			position: relative;
+
+			& img, & video{
+				display: block;
+				width: 100%;
+				height: 100%;
+				max-height: 100%;
+				object-fit: cover;
+			}
+
+			& video{
+				// filter: blur(2px);
+			}
+
+			& .hero-text{
+				position: absolute;
+				background: rgba(black, .2);
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+				padding: 3vmax;
+				backdrop-filter: blur(20px);
+				color: #fff;
+				z-index: 2;
+
+				& h1{
+					margin: 0;
+					font-size: calc(2rem + 2vmax);
+				}
+			}
+		}
+	}
+
+	& .no-margin{
+		margin: 0 !important
+	}
+
+	#feedback{
+
+		padding: 4vmax 0;
+
+		& form{
+			padding: 2vmax 4vmax;
+			background: #fff;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: baseline;
+			justify-content: center;
+
+			& .input-field{
+				flex-grow: 1;
+				font-size: calc(18px + .1vmax);
+				margin-right: 20px;
+				min-width: 270px;
+			}
+
+			& .bttn{
+				padding: 0 20px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	& .sidenav{
+
+		display: flex;
+		flex-direction: column;
+
+		& .separator{
+			flex-grow: 1;
+		}
+	}
+
+	& .nowrap{
+		white-space: nowrap;
+	}
+}

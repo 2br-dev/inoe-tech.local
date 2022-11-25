@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "E-Rent", styles: "pages/erent"})
+</head>
+<body>
+	<main id="erent">
+		<section class="hero">
+			<div class="hero-text">
+				<h1 class="nowrap">E-Rent</h1>
+				<p class="descriptor">управление арендой</p>
+			</div>
+			<img src="" alt="" class="lazy" data-src="/img/erent.jpg">
+		</section>
+		@@include('./parts/header.html')
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col xl4 offset-xl1 l5 m8 offset-m2 s10 offset-s1 xs10 offset-xs1">
+						<img alt="" class="lazy q" data-src="/img/erent_logo.svg">
+						<div class="readyscript-block">
+							<div class="rs-left">По технологии</div>
+							<div class="rs-right">
+								<img class="lazy readyscript" data-src="/img/readyscript_logo.svg">
+							</div>
+						</div>
+					</div>
+					<div class="col xl5 l6 offset-l1 offset-xl1 m12">
+						<h2>Автоматизируйте арендный бизнес</h2>
+						<p>
+							Система E-Rent предназначена для автоматизации процессов взаимодействия участников 
+							в области аренды коммерческой недвижимости. Данная программа позволяет самостоятельно 
+							формировать ряд бухгалтерских документов, производить автоматические расчёты ставок 
+							аренды и программ лояльности, в зависимости от условий договора аренды. 
+						</p>
+						<p>
+							<a href="" class="bttn-outlined">Скачать пробную версию</a>
+							<a href="#plans" class="bttn scroll-link">Купить лицензию</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="always-near">
+			<div class="container">
+				<div class="row flex">
+					<div class="col l6 m12 order-m1">
+						<div class="always-near-text">
+							<h2>Всегда под под рукой</h2>
+							<p>
+								E-Rent позволяет арендатору самостоятельно, в любое время суток и из любой точки мира, 
+								сформировать счета за аренду недвижимости, акты-сверки за нужный период, увидеть полностью 
+								всю историю своих платежей за аренду объекта недвижимости.  Данные документы всегда доступны 
+								для просмотра и скачивания в личном кабинете арендатора. Для арендодателя система позволяет 
+								избавиться от рутинных задач по формированию и передаче стандартного пакета документов 
+								в данной отрасли бизнеса. Кроме того, система самостоятельно пересчитает суммы арендных платежей 
+								в зависимости от условий договора аренды, например, применение пониженных ставок аренды за оплату 
+								заранее, либо начислит пени в случае несвоевременной оплаты. 
+							</p>
+							<div class="text-separator"></div>
+							<p>
+								Образцы формируемых документов: <br>
+								<a href="">Счёт</a>
+								<a href="">Акт-сверка</a>
+								<a href="">Акт выполненных работ</a>
+							</p>
+						</div>
+					</div>
+					<div class="col offset-l1 l5 m8 offset-m2 s12">
+						<img src="" alt="" class="lazy h responsive-img" data-src="/img/about-erent.jpeg">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="plans">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h2>Тарифы</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col l4 m6 s12">
+						<div class="tarif z-depth-3">
+							<h3>Базовый</h3>
+							<p>Нужно с чего-то начинать)</p>
+							<div class="price-wrapper">
+								<div class="prefix">₽</div>
+								<div class="price">250</div>
+								<div class="suffix">/месяц</div>
+							</div>
+							<ul>
+								<li class="yes">Особенность тарифа</li>
+								<li class="yes">Особенность тарифа</li>
+								<li class="no">Крутая особенность тарифа</li>
+								<li class="no">Очень крутая особенность тарифа</li>
+								<li class="no">Очень крутая особенность тарифа</li>
+							</ul>
+							<div class="center-align">
+								<a href="" class="bttn-outlined">Купить лицензию</a>
+							</div>
+						</div>
+					</div>
+					<div class="col l4 m6 s12">
+						<div class="tarif z-depth-3">
+							<h3>Стандарт</h3>
+							<p>Один из самых популярных тарифов</p>
+							<div class="price-wrapper">
+								<div class="prefix">₽</div>
+								<div class="price">400</div>
+								<div class="suffix">/месяц</div>
+							</div>
+							<ul>
+								<li class="yes">Особенность тарифа</li>
+								<li class="yes">Особенность тарифа</li>
+								<li class="yes">Крутая особенность тарифа</li>
+								<li class="no">Очень крутая особенность тарифа</li>
+								<li class="no">Очень крутая особенность тарифа</li>
+							</ul>
+							<div class="center-align">
+								<a href="" class="bttn-outlined">Купить лицензию</a>
+							</div>
+						</div>
+					</div>
+					<div class="col l4 m6 offset-m3 s12">
+						<div class="tarif z-depth-3">
+							<h3>Продвинутый</h3>
+							<p>Выбор профессионалов</p>
+							<div class="price-wrapper">
+								<div class="prefix">₽</div>
+								<div class="price">600</div>
+								<div class="suffix">/месяц</div>
+							</div>
+							<ul>
+								<li class="yes">Особенность тарифа</li>
+								<li class="yes">Особенность тарифа</li>
+								<li class="yes">Крутая особенность тарифа</li>
+								<li class="yes">Очень крутая особенность тарифа</li>
+								<li class="yes">Очень крутая особенность тарифа</li>
+							</ul>
+							<div class="center-align">
+								<a href="" class="bttn-outlined">Купить лицензию</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="faq">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<div class="center-align">
+							<h2>Остались вопросы?</h2>
+						</div>
+					</div>
+					<div class="col s12">
+						<ul class="collapsible">
+							<li>
+								<div class="collapsible-header waves-effect waves-dark">Что необходимо для установки программного обеспечения E-Rent?</div>
+								<div class="collapsible-body">Для того чтобы устоновить систему E-Rent вы должны иметь аккаунт у хостинг провайдера и установленную cms Российского производства ReadyScript в любой комплектации (инструкция на установку ReadyScript).</div>
+							</li>
+							<li>
+								<div class="collapsible-header waves-effect waves-dark">Какие документы формирует система?</div>
+								<div class="collapsible-body">Система формирует: счета за оплату аренды недвижимости, акты-сверки, счёта-фактуры. </div>
+							</li>
+							<li>
+								<div class="collapsible-header waves-effect waves-dark">Как можно ознакомиться с интерфейсом программы без её установки?</div>
+								<div class="collapsible-body">Для начала работы с продуктом, необходимо его установить на свой компьютер. С интерфейсом программы можно ознакомиться по скриншотам программы в документации пользователя на сайте inoe.tech</div>
+							</li>
+							<li>
+								<div class="collapsible-header waves-effect waves-dark">Отличается ли предложенный тестовый период от полной лицензии?</div>
+								<div class="collapsible-body">Мы предоставляем бесплатный период пользования программой без ограничения функционала на 1 месяц. По истечению данного периода необходимо приобрести и активировать лицензию. </div>
+							</li>
+						</ul>
+					</div>
+					<div class="col s12 center-align"><a href="" class="bttn-outlined">Поддержка</a><a href="" class="bttn">Хочу тестовый период</a></div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/feedback.html')
+	</main>
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

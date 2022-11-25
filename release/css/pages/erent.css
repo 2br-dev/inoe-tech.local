@@ -1,0 +1,120 @@
+@charset "UTF-8";
+main#erent section#about {
+  padding: 4vmax 0; }
+  main#erent section#about img {
+    width: 100%; }
+  main#erent section#about .readyscript-block {
+    display: flex;
+    align-items: center;
+    margin: 2vmax 0; }
+    main#erent section#about .readyscript-block .rs-left {
+      width: 30%; }
+    main#erent section#about .readyscript-block .rs-right {
+      width: 70%; }
+
+main#erent section#always-near {
+  margin: 4vmax 0;
+  padding: 2vmax 0;
+  position: relative; }
+  main#erent section#always-near:before {
+    content: '';
+    display: block;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(158, 163, 176, 0.3);
+    height: calc(100% - 6vmax); }
+    @media (max-width: 1200px) {
+      main#erent section#always-near:before {
+        width: 100%;
+        height: 100%; } }
+  main#erent section#always-near .always-near-text {
+    display: flex;
+    flex-direction: column; }
+    main#erent section#always-near .always-near-text .text-separator {
+      height: 40px;
+      flex-grow: 1; }
+
+main#erent section#plans {
+  padding: 2vmax 0;
+  overflow: hidden; }
+  main#erent section#plans h2 {
+    text-transform: uppercase;
+    background: #000;
+    color: #fff;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0 20px;
+    position: relative; }
+    main#erent section#plans h2:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: calc(2vmax + 13px);
+      height: 100%;
+      background: black;
+      left: calc(-2vmax - 10px); }
+  main#erent section#plans .container {
+    position: relative; }
+    main#erent section#plans .container:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: calc(100% + 20vw);
+      height: calc(100% - 2vmax);
+      background: #9EA3B0;
+      z-index: -1;
+      top: -2vmax;
+      left: -2vmax; }
+    main#erent section#plans .container .tarif {
+      padding: 2vmax;
+      background: #fff;
+      margin-bottom: 2vmax; }
+      main#erent section#plans .container .tarif .price-wrapper {
+        display: flex;
+        align-items: baseline;
+        padding: 1rem 0;
+        position: relative; }
+        main#erent section#plans .container .tarif .price-wrapper:before {
+          content: '';
+          display: block;
+          width: 12px;
+          height: 100%;
+          position: absolute;
+          left: -2vmax;
+          top: 0;
+          background: black; }
+        main#erent section#plans .container .tarif .price-wrapper .prefix {
+          font-size: calc(16px + 1.6vmax);
+          font-weight: bold;
+          line-height: 1em;
+          transform: translateY(-1.6vmax); }
+        main#erent section#plans .container .tarif .price-wrapper .price {
+          font-size: calc(48px + 2vmax);
+          line-height: 1em;
+          font-weight: 800; }
+        main#erent section#plans .container .tarif .price-wrapper .suffix {
+          font-weight: 800;
+          font-size: calc(24px + 1vmax);
+          line-height: 1em;
+          flex-grow: 1; }
+      main#erent section#plans .container .tarif h3 {
+        margin: 0; }
+      main#erent section#plans .container .tarif .yes:before {
+        content: '✔';
+        color: #04B453; }
+      main#erent section#plans .container .tarif ul li {
+        line-height: 2em; }
+        main#erent section#plans .container .tarif ul li:before {
+          margin-right: 20px;
+          font-size: 24px; }
+      main#erent section#plans .container .tarif .no:before {
+        content: '✖';
+        color: #D32F2F; }
+  main#erent section#plans h2 {
+    margin: 0; }
+
+main#erent section#faq .collapsible-header {
+  font-weight: bold; }

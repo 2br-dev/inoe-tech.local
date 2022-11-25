@@ -1,0 +1,55 @@
+@charset "UTF-8";
+body section.hero h1 {
+  white-space: nowrap; }
+
+body section#about {
+  padding-top: 4vmax;
+  background-image: url(../../img/orbits.svg);
+  background-size: cover;
+  background-position: left 40vmax center;
+  background-repeat: no-repeat;
+  transform: translateZ(0); }
+  body section#about .about-text {
+    margin-bottom: 2vmax; }
+  @media (orientation: portrait) {
+    body section#about {
+      background-position: left -20vmin center; } }
+  body section#about .stack {
+    margin-top: 40vh;
+    margin-bottom: 4vmax; }
+    body section#about .stack .proglang {
+      display: inline-block; }
+      body section#about .stack .proglang:before, body section#about .stack .proglang:last-of-type:after {
+        content: '•';
+        padding: 0 15px; }
+
+body section#areas {
+  background-color: #9EA3B0;
+  background-repeat: no-repeat;
+  background-size: 70vmax auto;
+  background-position: bottom -7vmax left -22vmax;
+  padding: 2vmax 0; }
+  body section#areas h2 {
+    color: #F9F9F9;
+    text-transform: uppercase; }
+  body section#areas .area {
+    margin-bottom: 1vmax;
+    padding: 8vh 0;
+    background: #F9F9F9;
+    border-radius: 12px;
+    height: calc(100% - 1.5vmax); }
+    @media (max-width: 1200px) {
+      body section#areas .area {
+        height: calc(100% - 3vmax);
+        margin-bottom: 3vmax; } }
+    body section#areas .area h3 {
+      text-transform: uppercase;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0px; }
+    body section#areas .area p {
+      display: block;
+      width: 60%;
+      margin: auto;
+      min-width: 280px; }
