@@ -1,0 +1,17 @@
+@@if(context.type=="date"){
+	<div class="date">@@text</div>
+}
+@@if(context.type=="notification"){
+	@@if(context.class=="read"){
+		<div class="notification-entry @@class @@notification-type">
+	}
+	@@if(context.class=="unread"){
+		<div class="notification-entry @@class @@notification-type z-depth-2">
+	}
+		<div class="notification-icon"></div>
+		<div class="text">
+			<a href="#notification-modal" class="modal-trigger" data-text="@@text">@@title</a>
+		</div>
+		<div class="actions"><a href=""><i class="mdi mdi-close-circle"></i></a></div>
+	</div>
+}

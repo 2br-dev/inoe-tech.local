@@ -40,8 +40,8 @@
 					<div class="separator"></div>
 					<ul class="more">
 						<li><a href="#mobile-menu" class="sidenav-trigger hide-l-up"><i class="mdi mdi-menu"></i></a></li>
-						<li class="hide-m-down"><a href="tel://+79882432033">+7 (988) 243 20-33</a></li>
-						<li class="hide-m-down">
+						<li class="hide-l-down"><a href="tel://+79882432033">+7 (988) 243 20-33</a></li>
+						<li class="hide-l-down">
 							<a href=""><i class="mdi mdi-account"></i></a>
 							<ul>
 								<li><a href="#register" class="modal-trigger">Регистрация</a></li>
@@ -146,7 +146,7 @@
 							<div class="price-wrapper">
 								<div class="prefix">₽</div>
 								<div class="price">250</div>
-								<div class="suffix">/месяц</div>
+								<div class="suffix">/мес<span class="hide-xl-down">яц</span></div>
 							</div>
 							<ul>
 								<li class="yes">Особенность тарифа</li>
@@ -167,7 +167,7 @@
 							<div class="price-wrapper">
 								<div class="prefix">₽</div>
 								<div class="price">400</div>
-								<div class="suffix">/месяц</div>
+								<div class="suffix">/мес<span class="hide-xl-down">яц</span></div>
 							</div>
 							<ul>
 								<li class="yes">Особенность тарифа</li>
@@ -188,7 +188,7 @@
 							<div class="price-wrapper">
 								<div class="prefix">₽</div>
 								<div class="price">600</div>
-								<div class="suffix">/месяц</div>
+								<div class="suffix">/мес<span class="hide-xl-down">яц</span></div>
 							</div>
 							<ul>
 								<li class="yes">Особенность тарифа</li>
@@ -286,6 +286,103 @@
 		</div>
 	</div>
 </footer>
+<div class="modal" id="login">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h3>Авторизация</h3>
+			<a href="#!" class="modal-close"><i class="mdi mdi-close"></i></a>
+		</div>
+		<div class="row">
+			<div class="col m6 s12">
+				<div class="input-field">
+					<input type="text" placeholder="Логин">
+					<label for="">Логин</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col m6 s12">
+				<div class="input-field">
+					<input type="password" placeholder="Пароль">
+					<label for="">Пароль</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a href="#register" class="bttn-flat left modal-trigger modal-close">Нет аккаунта?</a>
+		<a href="/profile.html" class="bttn">Войти</a>
+	</div>
+</div>
+<div class="modal" id="register">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h3>Регистрация</h3>
+			<a href="#!" class="modal-close"><i class="mdi mdi-close"></i></a>
+		</div>
+		<div class="row">
+			<div class="col l6">
+				<div class="input-field">
+					<input type="text" placeholder="Фамилия">
+					<label for="">Фамилия</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col m6">
+				<div class="input-field">
+					<input type="text" placeholder="Имя">
+					<label for="">Имя</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col m6">
+				<div class="input-field">
+					<input type="text" placeholder="Отчество">
+					<label for="">Отчество</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col m6">
+				<div class="input-field">
+					<input type="text" placeholder="E-mail">
+					<label for="">E-mail</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col m6">
+				<div class="input-field">
+					<input type="password" placeholder="Пароль">
+					<label for="">Пароль</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col m6">
+				<div class="input-field">
+					<input type="password" placeholder="Подтверждение пароля">
+					<label for="">Подтверждение пароля</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a href="#login" class="bttn-flat left modal-trigger modal-close">Уже есть аккаунт?</a>
+		<a href="/profile.html" class="bttn">Отправить</a>
+	</div>
+</div>
+<div class="modal" id="notification-modal">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h3 id="title"></h3>
+			<a href="#!" class="modal-close"><i class="mdi mdi-close"></i></a>
+		</div>
+		<p id="content"></p>
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class="modal-close bttn-flat left">Прочитанное</a>
+		<a href="#!" class="modal-close bttn-critical">Удалить</a>
+	</div>
+</div>
 	<script src="/js/master.js"></script>
 </body>
 </html>

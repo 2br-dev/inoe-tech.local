@@ -35,6 +35,8 @@ header{
 						padding: 0 20px;
 						color: $text;
 						transition: background-color .2s;
+						display: block;
+						height: 100%;
 
 						&.logo{
 							background: url(/img/logo_planet.svg) left center no-repeat;

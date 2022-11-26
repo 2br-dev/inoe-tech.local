@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/master.css">
+
+	<link rel="stylesheet" href="/css/pages/profile.css">
+
+<title>Личный кабинет – управление профилем</title>
+</head>
+<body>
+	<header class="z-depth-1">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<nav>
+					<ul>
+						<li><a href="/" class="logo">Inoe.tech</a></li>
+					</ul>
+					<ul class="hide-l-down">
+						<li>
+							<a href="javascript:void(0);">Продукты</a>
+							<ul>
+								<li><a href="/erent.html">E-Rent</a></li>
+							</ul>
+						</li>
+						<li><a href="/services.html">Услуги</a></li>
+						<li><a href="/contacts.html">Контакты</a></li>
+					</ul>
+					<div class="separator"></div>
+					<ul class="more">
+						<li><a href="#mobile-menu" class="sidenav-trigger hide-l-up"><i class="mdi mdi-menu"></i></a></li>
+						<li class="hide-l-down"><a href="tel://+79882432033">+7 (988) 243 20-33</a></li>
+						<li class="hide-l-down">
+							<a href=""><i class="mdi mdi-account"></i></a>
+							<ul>
+								<li><a href="#register" class="modal-trigger">Регистрация</a></li>
+								<li><a href="#login" class="modal-trigger">Вход</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+<ul class="sidenav" id="mobile-menu">
+	<li><a href="/">Главная</a></li>
+	<li>
+		<a href="">Продукты</a>
+		<ul>
+			<li><a href="/erent.html">E-Rent</a></li>
+		</ul>
+	</li>
+	<li><a href="/services.html">Услуги</a></li>
+	<li><a href="/contacts.html">Контакты</a></li>
+	<li class="separator"></li>
+	<li><a href="#register" class="modal-trigger">Регистрация</a></li>
+	<li><a href="#login" class="modal-trigger">Вход</a></li>
+	<li>
+		<div class="divider"></div>
+	</li>
+	<li><a href="tel://+79882432033">+7 (988) 243 20-33</a></li>
+</ul>
+	<main>
+		<div id="profile-page">
+			<section id="profile-header">
+	<div class="container">
+		<h1>Профиль</h1> 
+		<div class="current-section">/уведомления</div>
+		<a href="/" class="bttn-outlined-white">Выход</a>
+	</div>
+</section>
+			<section id="profile-common">
+				<div class="container">
+					<div class="row">
+						<div class="col s12">
+							<ul class="tabs">
+								<li class="tab"><a target="_self" href="/profile.html">Персональные данные</a></li>
+								<li class="tab"><a target="_self" href="/licenses.html">Мои лицензии</a></li>
+								<li class="tab"><a class="new-indicator active" target="_self" href="/notifications.html"><span>Уведомления</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="profile-content">
+				<div class="container">
+					<div class="row">
+						<div class="col s12">
+							
+	<div class="date">12 апреля 2022г.</div>
+
+
+
+	
+	
+		<div class="notification-entry unread info z-depth-2">
+	
+		<div class="notification-icon"></div>
+		<div class="text">
+			<a href="#notification-modal" class="modal-trigger" data-text="К примеру, поступил платёж от клиента. Непрочитанные сообщения отображены болтом и стенью">Пример информационного уведомления</a>
+		</div>
+		<div class="actions"><a href=""><i class="mdi mdi-close-circle"></i></a></div>
+	</div>
+
+
+	
+		<div class="notification-entry read warning">
+	
+	
+		<div class="notification-icon"></div>
+		<div class="text">
+			<a href="#notification-modal" class="modal-trigger" data-text="Сообщения-предупреждения. Может быть как уведомления о приближении очередного срока платежа, так и о том, что конкретно взятый клиент не выполняет обязательств по платежам">Пример уведомления-предупреждения</a>
+		</div>
+		<div class="actions"><a href=""><i class="mdi mdi-close-circle"></i></a></div>
+	</div>
+
+
+	
+		<div class="notification-entry read critical">
+	
+	
+		<div class="notification-icon"></div>
+		<div class="text">
+			<a href="#notification-modal" class="modal-trigger" data-text="Критически важные уведомления. Необходимость немедленной оплаты тарифного плана, масса должников, и т.д.">Пример критического уведомления</a>
+		</div>
+		<div class="actions"><a href=""><i class="mdi mdi-close-circle"></i></a></div>
+	</div>
+
+
+	
+		<div class="notification-entry read success">
+	
+	
+		<div class="notification-icon"></div>
+		<div class="text">
+			<a href="#notification-modal" class="modal-trigger" data-text="К примеру, вы активировали новую лицензию, или о поступлении очередного платежа от вашего клиента">Пример уведомления об успешно выполненной операции</a>
+		</div>
+		<div class="actions"><a href=""><i class="mdi mdi-close-circle"></i></a></div>
+	</div>
+
+	<div class="date">13 апреля 2022г.</div>
+
+
+
+	
+	
+		<div class="notification-entry unread info z-depth-2">
+	
+		<div class="notification-icon"></div>
+		<div class="text">
+			<a href="#notification-modal" class="modal-trigger" data-text="К примеру, поступил платёж от клиента. Непрочитанные сообщения отображены болтом и стенью">Пример информационного уведомления</a>
+		</div>
+		<div class="actions"><a href=""><i class="mdi mdi-close-circle"></i></a></div>
+	</div>
+
+
+	
+		<div class="notification-entry read warning">
+	
+	
+		<div class="notification-icon"></div>
+		<div class="text">
+			<a href="#notification-modal" class="modal-trigger" data-text="Сообщения-предупреждения. Может быть как уведомления о приближении очередного срока платежа, так и о том, что конкретно взятый клиент не выполняет обязательств по платежам">Пример уведомления-предупреждения</a>
+		</div>
+		<div class="actions"><a href=""><i class="mdi mdi-close-circle"></i></a></div>
+	</div>
+
+
+	
+		<div class="notification-entry read critical">
+	
+	
+		<div class="notification-icon"></div>
+		<div class="text">
+			<a href="#notification-modal" class="modal-trigger" data-text="Критически важные уведомления. Необходимость немедленной оплаты тарифного плана, масса должников, и т.д.">Пример критического уведомления</a>
+		</div>
+		<div class="actions"><a href=""><i class="mdi mdi-close-circle"></i></a></div>
+	</div>
+
+
+	
+		<div class="notification-entry read success">
+	
+	
+		<div class="notification-icon"></div>
+		<div class="text">
+			<a href="#notification-modal" class="modal-trigger" data-text="К примеру, вы активировали новую лицензию, или о поступлении очередного платежа от вашего клиента">Пример уведомления об успешно выполненной операции</a>
+		</div>
+		<div class="actions"><a href=""><i class="mdi mdi-close-circle"></i></a></div>
+	</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer>
+	<div class="container">
+		<div class="row flex vcenter">
+			<div class="col l10 m9 s12 align-left-m-up align-center-m-down">
+				<div class="copyright">© Inoe•tech 2021-2022, все права защищены</div>
+				<div class="reestr">входим в реестр аккредитованных ИТ-компаний РФ, решение от 13.06.2022 № АО-20220613-5373828181-3</div>
+			</div>
+			<div class="col l2 m3 s12 align-right-m-up align-center-m-down">
+				<div class="icons">
+					<a href="tel://+79882432033"><i class="mdi mdi-phone"></i></a>
+					<a href="https://wa.me/+79882432033"><i class="mdi mdi-whatsapp"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="modal" id="login">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h3>Авторизация</h3>
+			<a href="#!" class="modal-close"><i class="mdi mdi-close"></i></a>
+		</div>
+		<div class="row">
+			<div class="col m6 s12">
+				<div class="input-field">
+					<input type="text" placeholder="Логин">
+					<label for="">Логин</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col m6 s12">
+				<div class="input-field">
+					<input type="password" placeholder="Пароль">
+					<label for="">Пароль</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a href="#register" class="bttn-flat left modal-trigger modal-close">Нет аккаунта?</a>
+		<a href="/profile.html" class="bttn">Войти</a>
+	</div>
+</div>
+<div class="modal" id="register">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h3>Регистрация</h3>
+			<a href="#!" class="modal-close"><i class="mdi mdi-close"></i></a>
+		</div>
+		<div class="row">
+			<div class="col l6">
+				<div class="input-field">
+					<input type="text" placeholder="Фамилия">
+					<label for="">Фамилия</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col m6">
+				<div class="input-field">
+					<input type="text" placeholder="Имя">
+					<label for="">Имя</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col m6">
+				<div class="input-field">
+					<input type="text" placeholder="Отчество">
+					<label for="">Отчество</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col m6">
+				<div class="input-field">
+					<input type="text" placeholder="E-mail">
+					<label for="">E-mail</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col m6">
+				<div class="input-field">
+					<input type="password" placeholder="Пароль">
+					<label for="">Пароль</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col m6">
+				<div class="input-field">
+					<input type="password" placeholder="Подтверждение пароля">
+					<label for="">Подтверждение пароля</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a href="#login" class="bttn-flat left modal-trigger modal-close">Уже есть аккаунт?</a>
+		<a href="/profile.html" class="bttn">Отправить</a>
+	</div>
+</div>
+<div class="modal" id="notification-modal">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h3 id="title"></h3>
+			<a href="#!" class="modal-close"><i class="mdi mdi-close"></i></a>
+		</div>
+		<p id="content"></p>
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class="modal-close bttn-flat left">Прочитанное</a>
+		<a href="#!" class="modal-close bttn-critical">Удалить</a>
+	</div>
+</div>
+	<script src="/js/master.js"></script>
+</body>
+</html>

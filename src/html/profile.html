@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Личный кабинет – управление профилем", styles: "pages/profile"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main>
+		<div id="profile-page">
+			@@include('./parts/profile-common.html', {current_section: "персональные данные"})
+			<section id="profile-common">
+				<div class="container">
+					<div class="row">
+						<div class="col s12">
+							<ul class="tabs">
+								<li class="tab"><a target="_self" class="active" href="/profile.html">Персональные данные</a></li>
+								<li class="tab"><a target="_self" href="/licenses.html">Мои лицензии</a></li>
+								<li class="tab"><a class="new-indicator" target="_self" href="/notifications.html"><span>Уведомления</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="profile-content">
+				<div class="container">
+					<div class="row">
+						<div class="col l3 m4 s6 xs12">
+							<div class="input-field">
+								<input type="text" placeholder="Фамилия"><label for="">Фамилия</label>
+								<div class="indicator"></div>
+							</div>
+						</div>
+						<div class="col l3 m4 s6 xs12">
+							<div class="input-field">
+								<input type="text" placeholder="Имя"><label for="">Имя</label>
+								<div class="indicator"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col l3 m4 s6 xs12">
+							<div class="input-field">
+								<input type="text" placeholder="Отчество"><label for="">Отчество</label>
+								<div class="indicator"></div>
+							</div>
+						</div>
+						<div class="col l3 m4 s6 xs12">
+							<div class="input-field">
+								<input type="text" placeholder="E-mail"><label for="">E-mail</label>
+								<div class="indicator"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col l3 m4 s6 xs12">
+							<div class="input-field">
+								<input type="text" placeholder="Телефон"><label for="">Телефон</label>
+								<div class="indicator"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12"><a href="" class="bttn">Сохранить изменения</a><a href="" class="bttn-critical">Удалить профиль</a></div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

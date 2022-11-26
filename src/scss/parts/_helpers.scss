@@ -1,6 +1,35 @@
 body{
 
 	background: $paper;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+
+	& main{
+		flex-grow: 1;
+	}
+	
+	& .new-indicator{
+		position: relative;
+		
+		& i, & span{
+			position: relative;
+			display: inline-block;
+
+			&:after{
+				content: '';
+				display: block;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: $critical;
+				position: absolute;
+				top: 8px;
+				right: -8px;
+				animation: pulse 2s infinite;
+			}
+		}
+	}
 
 	& .bttn{
 
@@ -37,15 +66,29 @@ body{
 				background-color: saturate(lighten($critical, 10),50);
 			}
 		}
+
+		&-flat{
+			@extend .bttn-outlined;
+			box-shadow: none;
+		}
+
+		&-outlined-white{
+			@extend .bttn-outlined;
+			color: #fff;
+			box-shadow: 0 0 0 1px #fff inset;
+
+			&:hover{
+				background-color: rgba($paper, .1);
+			}
+		}
 	}
 
 	& .input-field{
 		border-bottom: 1px solid $text;
-		display: inline-block;
+		display: block;
 		position: relative;
 		padding-top: 15px;
 		margin: 10px 0;
-		overflow: hidden;
 		text-overflow: ellipsis;
 
 		& input{
@@ -219,5 +262,59 @@ body{
 
 	& .nowrap{
 		white-space: nowrap;
+	}
+
+	& .modal-header{
+		display: flex;
+
+		& h3{
+			margin: 0;
+			font-size: 1.5rem;
+			flex-grow: 1;
+		}
+
+		& .modal-close{
+			font-size: 24px;
+			color: $text;
+		}
+	}
+
+	& .tabs{
+
+		background-color: transparent;
+
+		& .indicator{
+			background-color: $link-color;
+		}
+
+		& .tab{
+
+			& a{
+				color: $text;
+				font-weight: bold;
+
+				&:hover{
+					color: $link-color;
+				}
+
+				&.active{
+					color: $link-color;
+				}
+			}
+
+		}
+	}
+
+	& *:focus{
+		outline: none;
+	}
+}
+
+@keyframes pulse{
+	from{
+		box-shadow: 0 0 0 0 $critical;
+	}
+	to{
+		box-shadow: 0 0 0 8px rgba($critical, 0);
 	}
 }

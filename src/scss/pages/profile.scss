@@ -1,0 +1,104 @@
+@import '../parts/vars';
+
+#profile-page{
+
+	& #profile-header{
+		margin-bottom: 4vmax;
+		background: $text;
+		color: $paper;
+
+		& .container{
+			display: flex;
+			align-items: baseline;
+
+			& h1{
+				font-family: 'Manrope';
+				font-weight: bold;
+				font-size: 3rem;
+				margin-top: 6vmax;
+			}
+
+			& .current-section{
+				flex-grow: 1;
+				margin-left: 20px;
+			}
+		}
+	}
+
+	& .date{
+		font-size: 12px;
+		text-transform: lowercase;
+		font-weight: bold;
+		border-bottom: 1px solid $fogged;
+		margin: 3vmax 0;
+	}
+
+	& .notification-entry{
+		display: flex;
+		align-items: center;
+		padding: 6px 12px;
+		margin: 6px 0;
+		border-radius: 6px;
+		background-color: #fff;
+		cursor: pointer;
+
+		&.unread{
+			font-weight: 400;
+		}
+
+		&.critical{
+			box-shadow: 0 0 0 1px $critical inset;
+		}
+
+		&.info .notification-icon:before{background-color: $info;}
+		&.success .notification-icon:before{background-color: $success;}
+		&.warning .notification-icon:before{background-color: $warning;}
+		&.critical .notification-icon:before{background-color: $critical;}
+
+		& .notification-icon{
+
+			width: 40px;
+			flex-shrink: 0;
+			padding: 6px;
+
+			&:before{
+				content: '';
+				display: block;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+			}
+		}
+
+		& .text{
+			flex-grow: 1;
+			white-space: nowrap;
+			max-width: calc(100% - 80px);
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			& a{
+				display: block;
+			}
+		}
+
+		& .actions{
+			@extend .notification-icon;
+			text-align: right;
+
+			&:before{
+				display: none;
+			}
+
+			& a{
+				transition: opacity .2s;
+				opacity: 0;
+				color: $text;
+			}
+		}
+
+		&:hover .actions a{
+			opacity: 1;
+		}
+	}
+}

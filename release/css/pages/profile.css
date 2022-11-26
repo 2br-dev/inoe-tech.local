@@ -1,0 +1,71 @@
+#profile-page #profile-header {
+  margin-bottom: 4vmax;
+  background: #333;
+  color: #F9F9F9; }
+  #profile-page #profile-header .container {
+    display: flex;
+    align-items: baseline; }
+    #profile-page #profile-header .container h1 {
+      font-family: 'Manrope';
+      font-weight: bold;
+      font-size: 3rem;
+      margin-top: 6vmax; }
+    #profile-page #profile-header .container .current-section {
+      flex-grow: 1;
+      margin-left: 20px; }
+
+#profile-page .date {
+  font-size: 12px;
+  text-transform: lowercase;
+  font-weight: bold;
+  border-bottom: 1px solid #9EA3B0;
+  margin: 3vmax 0; }
+
+#profile-page .notification-entry {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  margin: 6px 0;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer; }
+  #profile-page .notification-entry.unread {
+    font-weight: 400; }
+  #profile-page .notification-entry.critical {
+    box-shadow: 0 0 0 1px #D32F2F inset; }
+  #profile-page .notification-entry.info .notification-icon:before, #profile-page .notification-entry.info .actions:before {
+    background-color: #0044ff; }
+  #profile-page .notification-entry.success .notification-icon:before, #profile-page .notification-entry.success .actions:before {
+    background-color: #04B453; }
+  #profile-page .notification-entry.warning .notification-icon:before, #profile-page .notification-entry.warning .actions:before {
+    background-color: #FFA62A; }
+  #profile-page .notification-entry.critical .notification-icon:before, #profile-page .notification-entry.critical .actions:before {
+    background-color: #D32F2F; }
+  #profile-page .notification-entry .notification-icon, #profile-page .notification-entry .actions {
+    width: 40px;
+    flex-shrink: 0;
+    padding: 6px; }
+    #profile-page .notification-entry .notification-icon:before, #profile-page .notification-entry .actions:before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%; }
+  #profile-page .notification-entry .text {
+    flex-grow: 1;
+    white-space: nowrap;
+    max-width: calc(100% - 80px);
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    #profile-page .notification-entry .text a {
+      display: block; }
+  #profile-page .notification-entry .actions {
+    text-align: right; }
+    #profile-page .notification-entry .actions:before {
+      display: none; }
+    #profile-page .notification-entry .actions a {
+      transition: opacity .2s;
+      opacity: 0;
+      color: #333; }
+  #profile-page .notification-entry:hover .actions a {
+    opacity: 1; }

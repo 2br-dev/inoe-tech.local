@@ -1,0 +1,43 @@
+@import '../parts/vars';
+@import 'https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css';
+
+#contacts-page{
+
+	& h1{
+		margin: 10px 0;
+		white-space: nowrap;
+		
+		@media(max-width: $medium){
+			font-size: calc(2rem + 2vmax);
+		}
+	}
+
+	& h2{
+		font-size: calc(28px + .5vmax);
+		margin: 10px 0;
+	}
+	
+	& h3{
+		font-size: calc(24px + .3vmax);
+		margin: 10px 0;
+	}
+
+	& h4{
+		font-size: calc(18px + .3vmax);
+	}
+
+	& #map{
+		min-height: 100vh;
+	}
+
+	& .marker{
+
+		&:before{
+			content: '\F034E';
+			font-family: 'Material Design Icons';
+			font-size: 42px;
+			display: block;
+			color: $link-color;
+		}
+	}
+}
