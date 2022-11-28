@@ -6,6 +6,20 @@ main{
 
 		& section{
 
+			& .additional{
+
+				display: inline-block;
+
+				& a{
+
+					padding: 0 10px;
+
+					&:not(:last-of-type){
+						border-right: 1px solid $text;
+					}
+				}
+			}
+
 			&#about{
 
 				padding: 4vmax 0;

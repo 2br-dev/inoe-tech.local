@@ -1,0 +1,190 @@
+@import '../parts/vars';
+
+#docs-page{
+
+	& section{
+
+		padding-left: 300px;
+
+		@media(max-width: 993px){
+			padding-left: 0;
+		}
+	}
+
+	& #docs-header{
+
+		background: $text;
+		color: $paper;
+
+		& .container{
+
+			& .col{
+
+				display: flex;
+				align-items: center;
+			}
+
+			& .logo{
+				display: inline-block;
+				width: 40px;
+				height: 30px;
+				margin-right: 10px;
+				background-size: 80px auto;
+				background-position: top center;
+			}
+
+			& h1{
+				font-family: 'Manrope';
+				font-size: 2rem;
+				flex-grow: 1;
+				font-weight: bold;
+				display: inline-block;
+
+				& a{
+					color: $paper;
+
+					@media(min-width: 993px){
+						display: none;
+					}
+				}
+			}
+
+			& .search-field{
+
+				@media(max-width: $medium){
+					width: 100%;
+					margin-bottom: 30px;
+				}
+				
+				& .input-field{
+					border-color: $paper;
+					display: flex;
+					align-items: baseline;
+	
+					&:before{
+						content: '\F0349';
+						opacity: .3;
+						font-family: 'Material Design Icons';
+					}
+	
+					& label{
+						padding-left: 24px;
+						transition: font-size .2s, top .2s, padding-left .2s;
+					}
+					
+					& input{
+						color: $paper;
+	
+						&:focus, &:not(:placeholder-shown){
+	
+							& ~ label{
+								padding-left: 0;
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+	& #docs-content{
+		padding-top: 2vmax;
+		padding-bottom: 2vmax;
+
+		& .table-of-contents{
+			position: -webkit-sticky;
+			position: sticky;
+			top: 80px;
+
+			& a.active, & a:hover{
+				border-color: $link-color;
+			}
+		}
+	}
+}
+
+.sidenav-fixed{
+
+	@media(min-width: 992px){
+		margin-top: 56px;
+		height: calc(100vh - 56px);
+	}
+
+	& a{
+
+		&.here{
+			background-color: $link-color;
+			color: $paper;
+
+			&:hover{
+				background-color: darken($link-color, 10);
+			}
+		}
+
+		&:not(.folder){
+			&:before{
+				content: '▸ ';
+				color: transparent;
+			}
+		}
+
+		& ~ ul{
+			display: none;
+		}
+	}
+
+	& .folder{
+
+		& > ul{
+
+			& > li{
+
+				& > a{
+
+					&:before{
+						display: inline-block;
+						content: '▶';
+						margin-right: 12px;
+						color: transparent;
+					}
+				}
+			}
+		}
+
+		& ul{
+			background: rgba($text, .05);
+		}
+
+		& > a{
+			&:before{
+				display: inline-block;
+				content: '▶';
+				margin-right: 12px;
+				color: $text;
+				transition: transform .2s;
+			}
+		}
+
+		&.open{
+
+			border-left: 2px solid $link-color;
+
+			& > a{
+
+				&:before{
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+}
+
+.docs-footer{
+
+	padding-left: 300px;
+
+	@media(max-width: 993px){
+		padding-left: 0;
+	}
+}

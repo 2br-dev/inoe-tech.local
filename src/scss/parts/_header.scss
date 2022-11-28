@@ -6,7 +6,10 @@ header{
 	bottom: 0;
 	background: rgba(white, .7);
 	backdrop-filter: blur(8px);
-	z-index: 5;
+
+	@media(min-width: 992px){
+		z-index: 1000;
+	}
 
 	& .row{
 		margin: 0;

@@ -7,14 +7,18 @@ require('jquery-lazy/plugins/jquery.lazy.av');
 $(() => {
 	$('.lazy').lazy();
 
-	M.Sidenav.init(document.querySelector('.sidenav'));
+	M.Sidenav.init(document.querySelectorAll('.sidenav'));
 	M.Collapsible.init(document.querySelector('.collapsible'));
 	M.Modal.init(document.querySelectorAll('.modal'));
 	M.Tabs.init(document.querySelectorAll('.tabs'));
 	M.Tooltip.init(document.querySelectorAll('.tooltipped'));
+	M.ScrollSpy.init(document.querySelectorAll('.scrollspy'));
 
 	$('body').on('click', '.copy-serial', copySerial);
 	$('body').on('click', '.notification-entry .modal-trigger', prepareModal);
+	$('body').on('click', '.folder > a', toggleSubLevel);
+	$('body').on('focus', '.search-field input', extendSearchField);
+	$('body').on('blur', '.search-field input', collapseSearchField);
 
 	if($('#map').length){
 		loadScript("https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js", () => {
@@ -22,6 +26,35 @@ $(() => {
 		})
 	}
 });
+
+function collapseSearchField(){
+	$(this).parents('.input-field').removeClass('focus');
+}
+
+function extendSearchField(){
+	$(this).parents('.input-field').addClass('focus');
+}
+
+function toggleSubLevel(e){
+	let $parentUL = $(this).closest('ul')
+	let $parentLI = $(this).closest('li');
+	let $dropdown = $(this).next();
+	
+	let already = $dropdown.attr('data-open') ? true : false;
+	
+	
+	$parentUL.find('ul').slideUp('fast');
+	$parentUL.find('> li').removeClass('open');
+	
+	if(!already){
+		$parentLI.addClass('open');
+		$parentUL.find('ul').slideUp('fast');
+		$dropdown.slideDown('fast').attr('data-open', 'true');
+		e.preventDefault();
+	}else{
+		$dropdown.removeAttr('data-open');
+	}
+}
 
 function prepareModal(e){
 	

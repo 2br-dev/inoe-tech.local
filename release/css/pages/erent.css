@@ -1,4 +1,11 @@
 @charset "UTF-8";
+main#erent section .additional {
+  display: inline-block; }
+  main#erent section .additional a {
+    padding: 0 10px; }
+    main#erent section .additional a:not(:last-of-type) {
+      border-right: 1px solid #333; }
+
 main#erent section#about {
   padding: 4vmax 0; }
   main#erent section#about img {
