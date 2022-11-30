@@ -113,19 +113,14 @@
 
 	& a{
 
+		width: calc(100% - 60px);
+
 		&.here{
 			background-color: $link-color;
 			color: $paper;
 
 			&:hover{
 				background-color: darken($link-color, 10);
-			}
-		}
-
-		&:not(.folder){
-			&:before{
-				content: '▸ ';
-				color: transparent;
 			}
 		}
 
@@ -136,46 +131,57 @@
 
 	& .folder{
 
-		& > ul{
+		display: flex;
+		flex-wrap: wrap;
+		
+		& ul{
+			width: 100%;
+			border-left: 3px solid $link-color;
+		}
 
-			& > li{
+		& .fold-trigger{
+			width: 40px;
+			flex-shrink: 0;
+			padding: 0 10px;
+			text-align: center;
 
-				& > a{
+			&:before{
+				content: '▶';
+				transition: transform .2s;
+				display: inline-block;
+			}
 
-					&:before{
-						display: inline-block;
-						content: '▶';
-						margin-right: 12px;
-						color: transparent;
-					}
+			&.open{
+
+				&:before{
+					transform: rotate(90deg);
 				}
+			}
+
+			& + a{
+				flex-grow: 1;
+				width: calc(100% - 40px);
+				padding-left: 6px;
 			}
 		}
 
 		& ul{
 			background: rgba($text, .05);
 		}
+	}
 
-		& > a{
-			&:before{
-				display: inline-block;
-				content: '▶';
-				margin-right: 12px;
-				color: $text;
-				transition: transform .2s;
-			}
+	& :not(.folder){
+
+		& a{
+			padding-left: 46px;
 		}
+	}
 
-		&.open{
+	&:not(.folder){
 
-			border-left: 2px solid $link-color;
-
-			& > a{
-
-				&:before{
-					transform: rotate(90deg);
-				}
-			}
+		& a{
+			width: 100%;
+			flex-grow: 1;
 		}
 	}
 }

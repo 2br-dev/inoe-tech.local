@@ -16,7 +16,7 @@ $(() => {
 
 	$('body').on('click', '.copy-serial', copySerial);
 	$('body').on('click', '.notification-entry .modal-trigger', prepareModal);
-	$('body').on('click', '.folder > a', toggleSubLevel);
+	$('body').on('click', '.fold-trigger', toggleSubLevel);
 	$('body').on('focus', '.search-field input', extendSearchField);
 	$('body').on('blur', '.search-field input', collapseSearchField);
 
@@ -36,23 +36,22 @@ function extendSearchField(){
 }
 
 function toggleSubLevel(e){
-	let $parentUL = $(this).closest('ul')
-	let $parentLI = $(this).closest('li');
-	let $dropdown = $(this).next();
-	
-	let already = $dropdown.attr('data-open') ? true : false;
-	
-	
-	$parentUL.find('ul').slideUp('fast');
-	$parentUL.find('> li').removeClass('open');
-	
+	let $this = $(this);
+	let $ul = $this.next().next();
+	let $parent = $(this).closest('ul');
+	let $levelFolders = $parent.find('> .folder');
+	let $lefelFolds = $levelFolders.find('> .fold-trigger');
+	$lefelFolds.removeClass('open');
+	$levelFolders.find('> ul').slideUp();
+
+	let already = $this.hasClass('open');
+	$ul.slideUp('fast');
+
 	if(!already){
-		$parentLI.addClass('open');
-		$parentUL.find('ul').slideUp('fast');
-		$dropdown.slideDown('fast').attr('data-open', 'true');
-		e.preventDefault();
+		$this.addClass('open');
+		$ul.slideDown('fast');
 	}else{
-		$dropdown.removeAttr('data-open');
+		$this.removeClass('open');
 	}
 }
 
