@@ -96,10 +96,16 @@ main{
 						content: '';
 						display: block;
 						position: absolute;
-						width: calc(2vmax + 13px);
+						background: #000;
+						width: calc(100% + 2.8vw);
 						height: 100%;
-						background: black;
-						left: calc(-2vmax - 10px);
+						top: 0;
+						right: 0;
+						z-index: -1;
+
+						@media(max-width: $medium){
+							display: none;
+						}
 					}
 				}
 				
@@ -124,12 +130,17 @@ main{
 						background: #fff;
 						margin-bottom: 2vmax;
 
+						& .bttn-outlined{
+							margin: 0;
+						}
+
 						& .price-wrapper{
 
 							display: flex;
 							align-items: baseline;
 							padding: 1rem 0;
 							position: relative;
+
 
 							&:before{
 								content: '';
@@ -150,7 +161,7 @@ main{
 							}
 
 							& .price{
-								font-size: calc(48px + 2vmax);
+								font-size: calc(32px + 2vmax);
 								line-height: 1em;
 								font-weight: 800;
 							}
@@ -177,9 +188,18 @@ main{
 
 						& ul{
 
+							margin-bottom: 40px;
+
 							& li{
 
 								line-height: 2em;
+								text-align: center;
+								display: block;
+								width: fit-content;
+								margin: auto;
+								padding: 0 20px;
+								background: #000;
+								color: $paper;
 
 								&:before{
 									margin-right: 20px;

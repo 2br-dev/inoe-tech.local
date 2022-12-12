@@ -26794,7 +26794,8 @@ header {
   bottom: 0;
   background: rgba(255, 255, 255, 0.7);
   -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px); }
+          backdrop-filter: blur(8px);
+  z-index: 9000; }
   @media (min-width: 992px) {
     header {
       z-index: 1000; } }
